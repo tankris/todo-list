@@ -1,5 +1,12 @@
+/* Reset Properties for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Reset property specific to the unordered list tag */
+ul {
+  /* Removing the default bullet point added to each li item within ul */
+  list-style: none;
 }

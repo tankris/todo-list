@@ -39,7 +39,56 @@ form button {
 
 /* Hover properties for the Form button */
 form button:hover {
-  cursor: default;
   color: white;
   background-color: #d88771;
+}
+
+/* Properties related to the todo-container which holds the new todo items as they are added */
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Properties related to the ul element inside the todo-container */
+.todo-list {
+  min-width: 30%;
+}
+
+/* Properties related to the newly add todo item */
+.todo {
+  margin: 0.5rem;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Properties related to the todo item text */
+.todo-item {
+  padding: 0rem 0.5rem;
+  flex: 1;
+}
+
+/* Properties shared by both the buttons added to each todo item */
+.trash-btn,
+.complete-btn {
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Properties specific to the completed (check mark) button for each todo item */
+.complete-btn {
+  background-color: rgb(73, 204, 73);
+}
+
+/* Properties specific to the delete (trash can icon) button for each todo item */
+.trash-btn {
+  background-color: #ff6f47;
 }
