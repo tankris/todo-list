@@ -1,14 +1,20 @@
 // Selectors
+
+// Selects the input field of the form
 const todoInput = document.querySelector('.todo-input');
+// Selects the button within the form
 const todoButton = document.querySelector('.todo-button');
+// Selects the ul container
 const todoList = document.querySelector('.todo-list');
 
 // Event Listener
 
-// Adding event listener to the button in order to call function addTodo upon clicking it
+// Event listener for the button in order to call function addTodo upon clicking it
 todoButton.addEventListener('click', addTodo);
 
 // Functions
+
+//Function to add a todo itemby inserting the appropriate HTML
 function addTodo(event) {
     // Prevents the default action performed by the form, i.e to submit
     event.preventDefault();
@@ -21,7 +27,7 @@ function addTodo(event) {
     // Create a li element
     const newTodo = document.createElement('li');
     // Inserting temporary text inside the li element
-    newTodo.innerText = "Hey";
+    newTodo.innerText = todoInput.value;
     // Adding class to li element
     newTodo.classList.add("todo-item");
     // Making the li element a child of the above div container
@@ -47,4 +53,7 @@ function addTodo(event) {
 
     // Making the div container a child of the ul element with class name "todo-list"
     todoList.append(todoDiv);
+
+    // Reset the input field
+    todoInput.value = "";
 }
