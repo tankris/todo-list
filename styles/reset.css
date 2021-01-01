@@ -10,3 +10,10 @@ ul {
   /* Removing the default bullet point added to each li item within ul */
   list-style: none;
 }
+
+/* Reset properties related to the dropdown menu */
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+}
