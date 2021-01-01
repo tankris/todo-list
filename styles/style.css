@@ -30,7 +30,7 @@ form > * {
 }
 
 /* Form button properties */
-form button {
+.todo-button {
   cursor: pointer;
   color: #d88771;
   background-color: white;
@@ -38,9 +38,43 @@ form button {
 }
 
 /* Hover properties for the Form button */
-form button:hover {
+.todo-button:hover {
   color: white;
   background-color: #d88771;
+}
+
+/* Properties related to the todo items filter dropdown list */
+.filter-todo {
+  position: relative;
+  margin: 2rem;
+  padding: 0;
+}
+
+.filter-select {
+  display: block;
+  min-height: 3.3rem;
+  max-height: 3.3rem;
+  width: 12.5rem;
+  padding: 0 1rem;
+  color: #d88771;
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+/* Properties related to the custom dropdown button for the todo items filter dropdown list */
+.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  min-height: 3.3rem;
+  max-height: 3.3rem;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  color: #d88771;
+  background-color: white;
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 
 /* Properties related to the todo-container which holds the new todo items as they are added */
@@ -65,6 +99,7 @@ form button:hover {
   background-color: white;
   font-size: 1.5rem;
   color: black;
+  transition: all 0.5s ease;
 }
 
 /* Properties related to the todo item text */
@@ -91,4 +126,22 @@ form button:hover {
 /* Properties specific to the delete (trash can icon) button for each todo item */
 .trash-btn {
   background-color: #ff6f47;
+}
+
+/* Properties related to the check and trash buttons for each todo item */
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+/* Properties related to the todo items that have been completed */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Properties related to the todo items upon deletion */
+.fall {
+  transform: translateX(10rem);
+  opacity: 0;
 }
